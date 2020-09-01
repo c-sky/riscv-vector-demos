@@ -37,7 +37,7 @@ More infomation please reference [here](https://github.com/romanheros/qemu.git).
 	
 ## Step2: Build case
 
-	./toolchain/bin/riscv64-unknown-linux-gnu-gcc -O2 test/run/vlbuv_uint32xm2-1.c
+	./toolchain/riscv64-linux-x86_64/bin/riscv64-unknown-linux-gnu-gcc -O2 test/run/vlbuv_uint32xm2-1.c
 	
 More unit test of vector please reference test/gcc
 
@@ -45,7 +45,7 @@ More unit test of vector please reference test/gcc
 
 ### Run on prebuilt qemu
 
-	qemu-riscv64 -cpu c910v a.out
+	./qemu/bin/qemu-riscv64 -cpu c910v -L ./toolchain/riscv64-linux-x86_64/sysroot a.out
 
 ### Run on source qemu
 
